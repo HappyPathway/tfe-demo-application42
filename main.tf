@@ -29,11 +29,11 @@ variable "aws_region" {
 
 module "ec2-instance" {
   source     = "app.terraform.io/jake-lundberg/ec2-instance/aws"
-  version    = "${var.private-repo-version}"
-  aws_region = "${var.aws_region}"
-  name       = "${var.owner}-tfe-demo-${var.environment}"
-  owner      = "${var.owner}@"
-  ttl        = "${var.ttl}"
+  version    = "1.0.0"
+  #aws_region = "us-east-1"
+  #name       = "${var.owner}-tfe-demo-${var.environment}"
+  #owner      = "${var.owner}@"
+  #ttl        = "${var.ttl}"
 }
 
 output "public_dns" {
