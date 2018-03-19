@@ -36,6 +36,6 @@ module "ec2-instance" {
   #ttl        = "${var.ttl}"
 }
 
-output "public_dns" {
-  value = "${module.ec2-instance.aws_instance.ubuntu.public_dns}"
-}
+#output "public_dns" {
+#  value = "${module.ec2-instance.aws_instance.ubuntu.public_dns}"
+#}
