@@ -28,7 +28,7 @@ variable "aws_region" {
 }
 
 module "ec2-instance" {
-  source     = "${var.private-repo-source}"
+  source     = "app.terraform.io/jake-lundberg/ec2-instance/aws"
   version    = "${var.private-repo-version}"
   aws_region = "${var.aws_region}"
   name       = "${var.owner}-tfe-demo-${var.environment}"
