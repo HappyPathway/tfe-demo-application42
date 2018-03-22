@@ -1,21 +1,3 @@
-#variable "private-repo-source" {
-#  description = "Private SaaS repo source"
-#  default     = "app.terraform.io/jake-lundberg/ec2-instance/aws"
-#}
-
-#variable "private-repo-version" {
-#  description = "Version of this module to use"
-#}
-
-#variable "environment" { 
-#  description = "Release environment that can be added to names and tags to differentiate nodes in the same account"
-#  default     = "dev"
-#}
-
-
-
-//--------------------------------------------------------------------
-// Variables
 variable "ec2_instance_ami_id" {
   description = "ID of the AMI to provision. Default is Ubuntu 14.04 Base Image"
   default = "ami-2e1ef954"
@@ -46,8 +28,11 @@ variable "ec2_instance_ttl" {
   default = "3"
 }
 
-//--------------------------------------------------------------------
-// Modules
+#variable "ec2_instance_description" {
+#  description = "Describes things"
+#  default = "Foo"
+#}
+
 module "ec2_instance" {
   source  = "app.terraform.io/jake-lundberg/ec2-instance/aws"
   version = "1.0.0"
@@ -58,8 +43,5 @@ module "ec2_instance" {
   name          = "${var.ec2_instance_name}"
   owner         = "${var.ec2_instance_owner}"
   ttl           = "${var.ec2_instance_ttl}"
+  #description  = "${var.ec2_instance_description}"
 }
-
-#output "ec2_instance_public_dns" {
-#  value = "${module.ec2_instance.aws_instance.ubuntu.public_dns}"
-#}
