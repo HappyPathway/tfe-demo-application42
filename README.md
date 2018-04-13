@@ -4,6 +4,7 @@ This repo is here to demonstrate abstracting Terraform Enterprise private regist
 
 ## Deploy instructions
  * Ensure you've deploy https://github.com/grove-mountain/terraform-aws-ec2-instance.git as a private registry 
+ * Ensure you've deploy https://github.com/grove-mountain/terraform-gpc-compute-instance.git as a private registry 
  * set $private-repo-source. This will be the locate displayed after the registry is made
  * set $private-repo-version   
  * Create a new module workspace in your organization referencing this repo
