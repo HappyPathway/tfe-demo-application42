@@ -5,7 +5,7 @@ variable "ec2_instance_ami_id" {
 
 variable "ec2_instance_aws_region" {
   description = "AWS region"
-  default = "us-east-1"
+  default = "us-west-1"
 }
 
 variable "ec2_instance_instance_type" {
